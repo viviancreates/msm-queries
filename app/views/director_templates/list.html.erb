@@ -1,1 +1,16 @@
-howdy
+<h1>List of directors</h1>
+<% Director.all.each do |a_director| %>
+  <li>
+  <%= a_director %> (<%= a_director.dob %>)
+  </li>
+<%end%>
+
+<table>
+  <tr>
+    <th>ID</th>
+    <th>Image</th>
+    <th>Name</th>
+    <th>DOB</th>
+    <th></th>
+  </tr>
+</table>
