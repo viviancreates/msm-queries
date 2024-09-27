@@ -5,4 +5,10 @@ class DirectorsController < ApplicationController
 
   end
 
+  def show
+    the_id = params.fetch("the_id")
+
+  render ({:template => "director_templates/details"})
+  end
+
 end
