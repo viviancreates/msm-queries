@@ -15,10 +15,15 @@ class DirectorsController < ApplicationController
   end
 
   def junior
+    
+    @youngest_director = Director.order(:dob).last
+
     render ({:template => "director_templates/junior"})
   end
 
   def senior 
+    @eldest_director = Director.order(:dob).first
+
     render ({:template => "director_templates/senior"})
   end
 
